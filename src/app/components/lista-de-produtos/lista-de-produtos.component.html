@@ -1,0 +1,40 @@
+<hr>
+<h1>Lista de Carros:</h1>
+<hr> <br>
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>Ano</th>
+    <th>Versão</th>
+    <th>Combustível</th>
+    <th>Cores</th>
+    <th>Câmbio</th>
+    <th>Quilometragem</th>
+    <th>Blindagem</th>
+    <th>Preco</th>
+    <th>Operação</th>
+  </tr>
+  <tr *ngFor= "let produto of lista_produtos">      
+    <td>{{produto.marca}}     </td>
+    <td>{{produto.modelo}}     </td>
+    <td>{{produto.ano}}     </td>
+    <td>{{produto.versao}}     </td>
+    <td>{{produto.combustivel}}     </td>
+    <td>{{produto.cores}}     </td>
+    <td>{{produto.cambio}}     </td>
+    <td>{{produto.quilometragem}}     </td>
+    <td>{{produto.blindagem}}     </td>
+    <td>{{produto.preco}}     </td>
+
+    <td>
+      <button (click)="excluir(produto)">Excluir</button>
+      <button (click)="editar(produto)">Editar</button>
+    </td>
+  </tr>
+</table>
+
+<br>
+<hr> <br>
+<button (click)="irParaCriarProduto()">Criar Carro</button>
+

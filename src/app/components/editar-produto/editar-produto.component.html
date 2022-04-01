@@ -1,0 +1,69 @@
+<h1>Editar Carro</h1>
+
+<form [formGroup]="formEditar" (ngSubmit)="submitForm()">
+
+<label>Marca: </label>
+<input type="text" formControlName="marca"> <br>
+<div *ngIf="formEditar.controls['marca'].touched">
+    <small *ngIf="formEditar.controls['marca'].hasError('required')" style="color: red;">A marca é Obrigatória</small>
+    <small *ngIf="formEditar.controls['marca'].hasError('minlength')" style="color: red;">A marca precisa ter no mínimo 5 caracteres</small>
+</div>
+
+<label>Modelo: </label>
+<input type="text" formControlName="modelo"> <br>
+<div *ngIf="formEditar.controls['modelo'].touched"> 
+    <small *ngIf="formEditar.controls['modelo'].hasError('required')" style="color: red;">Informar o Modelo é Obrigatório</small>
+</div>
+
+<label>Ano: </label>
+<input type="number" formControlName="ano"> <br>
+<div *ngIf="formEditar.controls['ano'].touched"> 
+    <small *ngIf="formEditar.controls['ano'].hasError('required')" style="color: red;">Informar o Ano é Obrigatório</small>
+</div>
+
+<label>Versão: </label>
+<input type="text" formControlName="versao"> <br>
+<div *ngIf="formEditar.controls['versao'].touched"> 
+    <small *ngIf="formEditar.controls['versao'].hasError('required')" style="color: red;">Informar a Versão é Obrigatório</small>
+</div>
+
+<label>Combustível: </label>
+<input type="text" formControlName="combustivel"> <br>
+<div *ngIf="formEditar.controls['combustivel'].touched"> 
+    <small *ngIf="formEditar.controls['combustivel'].hasError('required')" style="color: red;">Informar o tipo de combustível é Obrigatório</small>
+</div>
+
+<label>Cores: </label>
+<input type="text" formControlName="cores"> <br>
+<div *ngIf="formEditar.controls['cores'].touched"> 
+    <small *ngIf="formEditar.controls['cores'].hasError('required')" style="color: red;">Informar a cor é Obrigatório</small>
+</div>
+
+<label>Câmbio: </label>
+<input type="text" formControlName="cambio"> <br>
+<div *ngIf="formEditar.controls['cambio'].touched"> 
+    <small *ngIf="formEditar.controls['cambio'].hasError('required')" style="color: red;">Informar o câmbio é Obrigatório</small>
+</div>
+
+<label>Quilometragem: </label>
+<input type="number" formControlName="quilometragem"> <br>
+<div *ngIf="formEditar.controls['quilometragem'].touched"> 
+    <small *ngIf="formEditar.controls['quilometragem'].hasError('required')" style="color: red;">Informar a quilometragem é Obrigatório</small>
+</div>
+
+<label>Blindagem: </label>
+<input type="text" formControlName="blindagem"> <br>
+<div *ngIf="formEditar.controls['blindagem'].touched"> 
+    <small *ngIf="formEditar.controls['blindagem'].hasError('required')" style="color: red;">Informar a blindagem é Obrigatório</small>
+</div>
+
+<label>Preço: </label>
+<input type="text" formControlName="preco"> <br>
+<div *ngIf="formEditar.controls['preco'].touched"> 
+    <small *ngIf="formEditar.controls['preco'].hasError('required')" style="color: red;">O Preço é Obrigatório</small>
+</div>
+
+<br>
+<button type="submit" >Salvar</button>
+</form>
+
